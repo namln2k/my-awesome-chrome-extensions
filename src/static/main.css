@@ -1,0 +1,171 @@
+#wrapperfull {
+  display: none !important
+}
+
+#task_view_detail .bc-view-pp-left {
+  width: 60%;
+}
+
+#task_view_detail .bc-detal-task-title {
+  width: 39%;
+}
+
+.log-time-popup,
+.update-comment,
+#form_add_comment {
+  margin-right: 16px;
+  padding: 0 16px 4px 16px;
+  background: #fff none repeat scroll 0 0;
+  box-shadow: -5px -5px 5px rgba(0, 0, 0, 0.5);
+  max-width: calc(100vw - 32px);
+}
+
+.log-time-popup .grid.create-task-custom .grid-content .formRight,
+.update-comment .grid.create-task-custom .grid-content .formRight,
+#form_add_comment .grid.create-task-custom .grid-content .formRight {
+  float: none;
+  width: 64%;
+  overflow: unset;
+}
+
+.log-time-popup .grid.create-task-custom .grid-content label,
+.update-comment .grid.create-task-custom .grid-content label,
+#form_add_comment .grid.create-task-custom .grid-content label {
+  float: none;
+}
+
+.update-comment .grid.create-task-custom .formRowComment .btn,
+#form_add_comment .grid.create-task-custom .formRowComment .btn {
+  margin-right: 50%;
+  font-weight: 700;
+  border-radius: 6px;
+  padding: 8px 24px;
+}
+
+.bc-comment-task .wrap_comment {
+  margin-bottom: 380px;
+}
+
+.pull-right.bc-pull-right-custom {
+  width: 25%;
+  position: fixed;
+  display: flex;
+  border-top-right-radius: 6px;
+  gap: 16px;
+  justify-content: flex-end;
+  top: 57px;
+  right: 16px;
+  background-image: linear-gradient(to right, rgba(0, 0, 255, 0), #a0afff);
+  padding: 12px 20px 6px 0;
+  z-index: 999;
+}
+
+.pull-right.bc-pull-right-custom .btn {
+  border-radius: 6px;
+  font-weight: 700;
+  padding: 8px 24px;
+}
+
+.log-time-popup .grid.create-task-custom,
+.update-comment .grid.create-task-custom,
+#form_add_comment .grid.create-task-custom {
+  margin-top: 12px;
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-image: url("https://res.cloudinary.com/dmnntmjiv/image/upload/v1686102716/anime-girl_yvphev.jpg");
+  background-position-x: 450px;
+}
+
+#form_add_comment .grid.create-task-custom {
+  border: none
+}
+
+.log-time-popup .cke_toolbox .cke_toolbar_break,
+.update-comment .cke_toolbox .cke_toolbar_break,
+.update-comment .cke_toolbox .cke_toolbar_break,
+.update-comment .cke_toolbox .cke_toolbar_break {
+  display: none;
+}
+
+#form_add_comment {
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0.3s, opacity 0.3s linear;
+}
+
+.bc-wrap-taskdetail .bc-view-pp-left .change-task-status-container {
+  width: 25%;
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  top: 118px;
+  right: 16px;
+  background-image: linear-gradient(to right, rgba(0, 0, 255, 0), rgb(160, 175, 255));
+  z-index: 999;
+  gap: 16px;
+  padding: 6px 20px 12px 0px;
+  font-weight: 700;
+}
+
+.bc-wrap-taskdetail .bc-view-pp-left .change-task-status-container .bc-title-inner {
+  line-height: 36px;
+  width: 75px;
+  color: rgb(0, 0, 0);
+}
+
+.bc-wrap-taskdetail #update_status_task {
+  border-radius: 6px;
+  padding: 8px;
+  height: 36px;
+}
+
+a.cd-top {
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  bottom: 60px;
+  right: 30px;
+  background: rgba(232, 98, 86, 0.8) url("https://res.cloudinary.com/dmnntmjiv/image/upload/v1685675519/icons8-chevron-up-64_t1drzm.png") no-repeat center 50%;
+  background-size: cover;
+  z-index: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: visibility 0.2s, opacity 0.2s linear;
+}
+
+a.cd-top.cd-is-visible {
+  opacity: 1;
+  display: inline-block;
+  visibility: visible;
+}
+
+a.cd-top.cd-is-visible:hover {
+  background-color: rgb(117, 117, 117);
+}
+
+#toBotBtn {
+  opacity: 0;
+  visibility: hidden;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  bottom: 10px;
+  right: 30px;
+  background: rgba(232, 98, 86, 0.8) url("https://res.cloudinary.com/dmnntmjiv/image/upload/v1685675519/icons8-chevron-down-64_dzxjhs.png") no-repeat center 50%;
+  background-size: cover;
+  z-index: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: visibility 0.2s, opacity 0.2s linear;
+}
+
+#toBotBtn:hover {
+  background-color: rgb(117, 117, 117);
+}
+
+.bc-view-pp-right p:last-child .bc-title-inner {
+  line-height: 29px;
+  font-weight: 700;
+  color: #000;
+}

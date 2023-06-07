@@ -13,7 +13,13 @@
     "default_title": "Awesome Chrome Extensions",
     "default_popup": "popup.html"
   },
-  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": ["https://*.pms.bssgroup.vn/*"],
+      "js": ["contentScript.js"],
+      "css": ["main.css"]
+    }
+  ],
   "background": {
     "service_worker": "background.js"
   }

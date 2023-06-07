@@ -1,12 +1,15 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
 import '../assets/tailwind.css'
+import TabGroup from '../components/TabGroup'
 
-const Popup = (
-  <div>
-    <h1>Hello, World!</h1>
-  </div>
-)
+function Popup() {
+  return (
+    <>
+      <TabGroup />
+    </>
+  )
+}
 
 let rootNode = document.getElementById('react-root')
 if (!rootNode) {
@@ -16,4 +19,4 @@ if (!rootNode) {
 }
 
 const root = createRoot(rootNode)
-root.render(Popup)
+root.render(<Popup />)

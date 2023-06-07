@@ -9,14 +9,14 @@ module.exports = {
   devtool: 'cheap-module-source-map',
   entry: {
     popup: path.resolve('./src/popup/popup.tsx'),
-    options: path.resolve('./src/options/options.tsx'),
     background: path.resolve('./src/background/background.ts'),
+    contentScript: path.resolve('./src/contentScript/contentScript.tsx'),
   },
   module: {
     rules: [
       {
         use: 'ts-loader',
-        test: /\.tsx$/,
+        test: /\.(tsx|ts)$/,
         exclude: /node_modules/,
       },
       {
@@ -43,7 +43,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['.tsx', '.ts', 'js'],
+    extensions: ['.tsx', '.ts', '.js'],
   },
   output: {
     filename: '[name].js',
@@ -54,11 +54,13 @@ module.exports = {
         { from: path.resolve('src/static'), to: path.resolve('dist') },
       ],
     }),
-    ...getHtmlPlugins(['popup', 'options']),
+    ...getHtmlPlugins(['popup']),
   ],
   optimization: {
     splitChunks: {
-      chunks: 'all',
+      chunks(chunk) {
+        return chunk.name !== 'contentScript'
+      },
     },
   },
 }

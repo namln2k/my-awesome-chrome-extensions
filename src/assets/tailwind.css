@@ -2,6 +2,4 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  width: 400px;
-}
+@import url('./popup.css');
