@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import ChatGPT from './ChatGPT'
 import PMSBackground from './PMSBackground'
+import EnterApiKey from './EnterApiKey'
 
 const tabs = [
   { id: 'chat-gpt', title: 'Chat GPT', component: <ChatGPT /> },
+  { id: 'api-key', title: 'API Key', component: <EnterApiKey /> },
   { id: 'pms-bg', title: 'PMS Background', component: <PMSBackground /> },
 ]
 
