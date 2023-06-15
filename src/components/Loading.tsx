@@ -3,12 +3,13 @@ import '../assets/loading.css'
 
 interface IProps {
   show?: boolean
+  className?: string
 }
 
-export default function Loading({ show }: IProps) {
+export default function Loading({ show, className }: IProps) {
   return (
     <>
-      <div id="loading" className={`loading ${show && 'show'}`}>
+      <div id="loading" className={`loading ${show && 'show'} ${className}`}>
         <svg
           className="spinner"
           width="65px"
