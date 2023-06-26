@@ -8,16 +8,9 @@ export default function EnterApiKey() {
     if (!apiKey || apiKey === '') {
       return
     }
-    console.log(apiKey);
     
     chrome.storage.local.set({ GPT_API_KEY: apiKey }, function () {
-      console.log('Key ' + apiKey + ' saved')
-
       setKeySaved(true)
-    })
-
-    chrome.storage.local.get(['GPT_API_KEY']).then((result) => {
-      console.log(result)
     })
   }
 

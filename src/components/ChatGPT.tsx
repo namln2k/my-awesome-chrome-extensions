@@ -4,8 +4,6 @@ import Loading from './Loading'
 
 let API_KEY
 
-const MAX_NUMBER_OF_SAVED_MESSAGES = 10
-
 interface Message {
   text: string
   type: MessageType
@@ -39,6 +37,16 @@ export default function ChatGPT() {
   useEffect(() => {
     focusTextInput()
   }, [])
+
+  const fetchMessagesFromStorage = () => {
+    chrome.storage.local.get(['SAVED_MESSAGES']).then((result) => {
+      console.log(result)
+    })
+  }
+
+  useEffect(() => {
+    fetchMessagesFromStorage()
+  })
 
   useEffect(() => {
     scrollToBottom()
@@ -112,6 +120,9 @@ export default function ChatGPT() {
         },
       ])
 
+      chrome.storage.local.set({
+        SAVED_MESSAGES: JSON.stringify(outputedMessages),
+      })
       setInputText('')
       textInputRef.current.focus()
     } catch (error) {
@@ -131,6 +142,7 @@ export default function ChatGPT() {
 
   const clearHistory = () => {
     setOutputedMessages([])
+    chrome.storage.local.set({ SAVED_MESSAGES: '[]' })
   }
 
   return (
