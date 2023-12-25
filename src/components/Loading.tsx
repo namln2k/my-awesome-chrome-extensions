@@ -1,5 +1,5 @@
 import React from 'react'
-import '../assets/loading.scss'
+import '@assets/loading.scss'
 
 interface IProps {
   show?: boolean

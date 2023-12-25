@@ -1,12 +1,11 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
-import '../assets/tailwind.scss'
-import TabGroup from '../components/TabGroup'
+import '@assets/popup.scss'
 
 function Popup() {
   return (
     <>
-      <TabGroup />
+      <div>More contents comming soon...</div>
     </>
   )
 }

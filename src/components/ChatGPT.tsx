@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { MessageType } from '../types/enums'
-import Loading from './Loading'
+import { MessageType } from '@customTypes/enums'
+import Loading from '@components/Loading'
 
 let API_KEY
 
@@ -189,9 +189,8 @@ export default function ChatGPT() {
         />
         <div className="flex justify-center mt-4">
           <button
-            className={`w-1/2 px-4 py-2 rounded-md bg-black text-white hover:bg-gray-900 focus:outline-none mr-2 ${
-              fetchingApi && 'opacity-75 bg-gray-600 cursor-not-allowed'
-            }`}
+            className={`w-1/2 px-4 py-2 rounded-md bg-black text-white hover:bg-gray-900 focus:outline-none mr-2 ${fetchingApi && 'opacity-75 bg-gray-600 cursor-not-allowed'
+              }`}
             onClick={generateText}
           >
             Send

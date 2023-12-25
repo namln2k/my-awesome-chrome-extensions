@@ -2,8 +2,10 @@
   display: none !important;
 }
 
-#task_view_detail .bc-view-pp-left {
-  width: 60%;
+#task_view_detail {
+  .bc-view-pp-left {
+    width: 60%;
+  }
 }
 
 #task_view_detail .bc-detal-task-title {

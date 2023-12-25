@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import ChatGPT from './ChatGPT'
-import PMSBackground from './PMSBackground'
-import EnterApiKey from './EnterApiKey'
+import ChatGPT from '@components/ChatGPT'
+import PMSBackground from '@components/PMSBackground'
+import EnterApiKey from '@components/EnterApiKey'
 
 const tabs = [
   { id: 'chat-gpt', title: 'Chat GPT', component: <ChatGPT /> },
@@ -21,11 +21,10 @@ export default function TabGroup() {
         {tabs.map((tab) => (
           <div
             key={tab.id}
-            className={`py-3 px-6 cursor-pointer border-b-2 outline-none border-b-transparent border-solid uppercase text-gray-600 ${
-              tab.id === active.id
-                ? '!border-b-red-500 !bg-primary-lighter !text-primary'
-                : ''
-            }`}
+            className={`py-3 px-6 cursor-pointer border-b-2 outline-none border-b-transparent border-solid uppercase text-gray-600 ${tab.id === active.id
+              ? '!border-b-red-500 !bg-primary-lighter !text-primary'
+              : ''
+              }`}
             onClick={() => setActive(tab)}
           >
             <p className="text-sm">{tab.title}</p>

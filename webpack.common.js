@@ -9,7 +9,6 @@ module.exports = {
   devtool: 'cheap-module-source-map',
   entry: {
     popup: path.resolve('./src/popup/popup.tsx'),
-    background: path.resolve('./src/background/background.ts'),
     contentScript: path.resolve('./src/contentScript/contentScript.ts'),
   },
   module: {
@@ -36,6 +35,12 @@ module.exports = {
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
+    alias: {
+      "@components": path.resolve(__dirname, "src/components"),
+      "@customTypes": path.resolve(__dirname, "src/types"),
+      "@assets": path.resolve(__dirname, "src/assets"),
+      "@static": path.resolve(__dirname, "src/static")
+    }
   },
   output: {
     filename: '[name].js',
