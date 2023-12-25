@@ -1,5 +1,5 @@
 #wrapperfull {
-  display: none !important
+  display: none !important;
 }
 
 #task_view_detail .bc-view-pp-left {
@@ -100,7 +100,7 @@
 }
 
 #form_add_comment .grid.create-task-custom {
-  border: none
+  border: none;
 }
 
 #form_add_comment .grid.create-task-custom .formRowComment {
@@ -118,8 +118,16 @@
   display: none;
 }
 
-.cke_contents {
+.cke_contents:not(.task-note + #cke_content .cke_contents) {
   height: 300px !important;
+}
+
+#form_note .create-task-custom .formRowComment {
+  height: 372px;
+}
+
+#form_note .create-task-custom .formRowComment .formRight {
+  width: 100%;
 }
 
 #form_add_comment {
@@ -135,7 +143,9 @@
   justify-content: flex-end;
   top: 164px;
   right: 16px;
-  background-image: linear-gradient(to right, rgba(0, 0, 255, 0), rgb(160, 175, 255));
+  background-image: linear-gradient(to right,
+      rgba(0, 0, 255, 0),
+      rgb(160, 175, 255));
   z-index: 999;
   gap: 16px;
   padding: 6px 20px 12px 0px;
@@ -160,8 +170,8 @@ a.cd-top {
   position: fixed;
   bottom: 60px;
   right: 30px;
-  background: rgba(232, 98, 86, 0.8) url("https://res.cloudinary.com/dmnntmjiv/image/upload/v1685675519/icons8-chevron-up-64_t1drzm.png") no-repeat center 50%;
-  background-size: cover;
+  background: rgba(232, 98, 86, 0.8) url("https://res.cloudinary.com/dmnntmjiv/image/upload/v1703209841/chevron-up-solid_jc9cla.svg") no-repeat center 50%;
+  background-size: 60%;
   z-index: 600;
   border-radius: 4px;
   cursor: pointer;
@@ -187,8 +197,8 @@ a.cd-top.cd-is-visible:hover {
   position: fixed;
   bottom: 10px;
   right: 30px;
-  background: rgba(232, 98, 86, 0.8) url("https://res.cloudinary.com/dmnntmjiv/image/upload/v1685675519/icons8-chevron-down-64_dzxjhs.png") no-repeat center 50%;
-  background-size: cover;
+  background: rgba(232, 98, 86, 0.8) url("https://res.cloudinary.com/dmnntmjiv/image/upload/v1703209841/chevron-down-solid_vkasqk.svg") no-repeat center 50%;
+  background-size: 60%;
   z-index: 600;
   border-radius: 4px;
   cursor: pointer;
@@ -205,8 +215,9 @@ a.cd-top.cd-is-visible:hover {
   color: #000;
 }
 
-.jumbotron {
+body .container.container_wrap .jumbotron {
   position: relative;
+  padding: 52px 0 10px 0;
 }
 
 .navbar.navbar-default {

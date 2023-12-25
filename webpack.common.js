@@ -20,27 +20,19 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        use: [
-          'style-loader',
-          'css-loader',
-          {
-            loader: 'postcss-loader',
-            options: {
-              postcssOptions: {
-                ident: 'postcss',
-                plugins: [tailwindcss, autoprefixer],
-              },
-            },
-          },
-        ],
-        test: /\.css$/i,
-      },
-      {
         type: 'assets/resource',
         use: 'asset/resource',
         test: /\.(png|jpg|jpeg|gif|woff|woff2|tff|eot|svg)$/,
       },
-    ],
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          "style-loader",
+          "css-loader",
+          "sass-loader",
+        ],
+      }
+    ]
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
