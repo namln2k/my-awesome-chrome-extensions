@@ -254,6 +254,13 @@
       return;
     }
 
+    const projectKeyName = Array.from(
+      document.querySelectorAll(".bc-title-inner")
+    )
+      .filter((e) => e.innerHTML === "Key: ")[0]
+      .parentElement.textContent.replace("Key: ", "")
+      .trim();
+
     const taskNameSpan = document.createElement("div");
     taskNameSpan.style.fontWeight = "bold";
     taskNameSpan.style.padding = "10px 20px";
@@ -267,7 +274,7 @@
       "linear-gradient(to right, rgba(0, 0, 255, 0), rgb(160, 175, 255))";
     taskNameSpan.style.zIndex = "999";
     taskNameSpan.style.borderBottom = "2px dashed #fff";
-    taskNameSpan.innerHTML = taskName.innerHTML;
+    taskNameSpan.innerHTML = `${projectKeyName} | ${taskName.innerHTML}`;
 
     navbar.appendChild(taskNameSpan);
   }
