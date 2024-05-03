@@ -19,8 +19,5 @@
       "js": ["contentScript.js"],
       "css": ["main.scss"]
     }
-  ],
-  "background": {
-    "scripts": ["background.js"]
-  }
+  ]
 }
